@@ -1,0 +1,14 @@
+{
+	"name": "roundhouseagency/githubrepofetcher'",
+	"description": "Fetches Github repo object to be used on front end for things like download url, star count, issue count, etc.",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Vadim Goncharov",
+			"homepage": "http://roundhouseagency.com"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}

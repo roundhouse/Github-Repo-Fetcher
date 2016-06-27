@@ -1,0 +1,47 @@
+{#
+/**
+ * Github Repo Fetcher plugin for Craft CMS
+ *
+ * GithubRepoFetcherFieldType HTML
+ *
+ * @author    Vadim Goncharov
+ * @copyright Copyright (c) 2016 Vadim Goncharov
+ * @link      http://roundhouseagency.com
+ * @package   GithubRepoFetcher
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+{%- set forms = (forms is defined ? forms : []) %}
+
+<div class="field">
+  <div class="heading">
+    <label for="githubUser">Github Username</label>
+  </div>
+  <div class="input ltr">
+    <input class="text" type="text" id="githubUser" name="githubUser" value="{{ (settings.githubUser is defined ? settings.githubUser : null) }}" maxlength="64" autocomplete="off">
+  </div>
+</div>
+
+<div class="field">
+  <div class="instructions"><p><a href="https://github.com/settings/developers" target="_blank">Go here</a> and create application for your Client ID and Client Secret.</p></div>
+</div>
+
+<div class="field">
+  <div class="heading">
+    <label for="clientId">Client ID</label>
+  </div>
+  <div class="input ltr">
+    <input class="text" type="text" id="clientId" name="clientId" value="{{ (settings.clientId is defined ? settings.clientId : null) }}" maxlength="64" autocomplete="off">
+  </div>
+</div>
+
+<div class="field">
+  <div class="heading">
+    <label for="clientSecret">Client Secret</label>
+  </div>
+  <div class="input ltr">
+    <input class="text" type="text" id="clientSecret" name="clientSecret" value="{{ (settings.clientSecret is defined ? settings.clientSecret : null) }}" maxlength="64" autocomplete="off">
+  </div>
+</div>
