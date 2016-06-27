@@ -21,9 +21,9 @@ class GithubRepoFetcherService extends BaseApplicationComponent
    */
   public function getRepo($fieldName, $repoName)
   {
-    $tonkens = '?client_id='.$fieldName->settings['clientId'].'&client_secret='.$fieldName->settings['clientSecret'];
+    $tonkens = 'client_id='.$fieldName->settings['clientId'].'&client_secret='.$fieldName->settings['clientSecret'];
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'https://api.github.com/repos/'.$fieldName->settings['githubUser'].'/'.$repoName).$tonkens;
+    curl_setopt($ch, CURLOPT_URL, 'https://api.github.com/repos/'.$fieldName->settings['githubUser'].'/'.$repoName.'?'.$tonkens);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
     $output = curl_exec($ch);

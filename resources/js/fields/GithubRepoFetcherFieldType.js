@@ -26,7 +26,7 @@
         };
         getRepoJson = function(settings, repoName) {
           var token;
-          token = '?client_id=' + settings.clientId + 'client_secret=' + settings.clientSecret;
+          token = '?client_id=' + settings.clientId + '&client_secret=' + settings.clientSecret;
           return $.getJSON('https://api.github.com/repos/roundhouse/' + repoName + token, function(data) {
             var $field, $repoUrl, $spinner;
             $field = $('#fields-' + _this.options.id + '-field');
